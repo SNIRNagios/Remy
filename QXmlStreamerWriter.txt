@@ -1,49 +1,4 @@
-#include "fen_superviseur.h"
-#include "ui_fen_superviseur.h"
-#include <QString>
-#include <QMessageBox>
-#include <QDomDocument>
-#include <QDomElement>
-//#include <QDomNode>
-//#include <QDomNodeList>
-#include <QFile>
-#include <QXmlStreamWriter>
-#include <QTextStream>
-
-
-FEN_Superviseur::FEN_Superviseur(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::FEN_Superviseur)
-{
-    ui->setupUi(this);
-}
-
-FEN_Superviseur::~FEN_Superviseur()
-{
-    delete ui;
-}
-
-
-//
-//Slot du bouton sauvegarder
-void FEN_Superviseur::on_PB_Valider_clicked()
-{
-    /*
-    bool ok;
-
-    Port = ui->LE_Port->text().toInt(&ok);// Récupération du port saisie par l'administrateur
-
-    if (ok==true)
-    {
-    }
-    else QMessageBox::warning(this, "Erreur", "Le numéro de port de saisie est incorrect");
-    */
-
-    AdresseIP = ui->LE_AdresseIP->text();// Récupération de l'adresse IP..
-    NomSite = ui->LE_NomSite->text();// Récupération du nom du site distant
-
-
-
+ 
     // On enregistre le nom du fichier XML dans un QString
     QString NomFichier ="FichierSuperviseur.xml";
 
@@ -84,10 +39,4 @@ void FEN_Superviseur::on_PB_Valider_clicked()
     QMessageBox::information(this, "Enregistrement", "Le fichier xml a bien été mis à jour");
 
 
-  }
-
-
-
 }
-
-

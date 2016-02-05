@@ -32,12 +32,10 @@ public:
     QLabel *ConfigurerLeSuperviseur;
     QLabel *label;
     QLabel *label_2;
-    QLabel *label_3;
     QPushButton *PB_Annuler;
     QPushButton *PB_Valider;
     QFrame *line;
     QLineEdit *LE_AdresseIP;
-    QLineEdit *LE_Port;
     QLineEdit *LE_NomSite;
     QMenuBar *menuBar;
     QStatusBar *statusBar;
@@ -65,9 +63,6 @@ public:
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         label_2->setGeometry(QRect(40, 110, 61, 16));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(70, 150, 31, 16));
         PB_Annuler = new QPushButton(centralWidget);
         PB_Annuler->setObjectName(QStringLiteral("PB_Annuler"));
         PB_Annuler->setGeometry(QRect(20, 230, 75, 23));
@@ -82,9 +77,6 @@ public:
         LE_AdresseIP = new QLineEdit(centralWidget);
         LE_AdresseIP->setObjectName(QStringLiteral("LE_AdresseIP"));
         LE_AdresseIP->setGeometry(QRect(100, 110, 91, 21));
-        LE_Port = new QLineEdit(centralWidget);
-        LE_Port->setObjectName(QStringLiteral("LE_Port"));
-        LE_Port->setGeometry(QRect(100, 150, 91, 21));
         LE_NomSite = new QLineEdit(centralWidget);
         LE_NomSite->setObjectName(QStringLiteral("LE_NomSite"));
         LE_NomSite->setGeometry(QRect(100, 70, 181, 21));
@@ -108,7 +100,6 @@ public:
         ConfigurerLeSuperviseur->setText(QApplication::translate("FEN_Superviseur", "Ajouter un nouveau site distant", 0));
         label->setText(QApplication::translate("FEN_Superviseur", "Nom du site:", 0));
         label_2->setText(QApplication::translate("FEN_Superviseur", "Adresse IP:", 0));
-        label_3->setText(QApplication::translate("FEN_Superviseur", "Port:", 0));
         PB_Annuler->setText(QApplication::translate("FEN_Superviseur", "Annuler", 0));
         PB_Valider->setText(QApplication::translate("FEN_Superviseur", "Sauvegarder", 0));
     } // retranslateUi

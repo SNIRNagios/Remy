@@ -1,0 +1,22 @@
+Commande GitBash pour mettre à jour les fichiers Qt:
+
+Accèder au dossier où sont situés les fichiers:
+
+-cd d:
+-cd SN2IR2016
+-ls
+-Oddou
+-cd Oddou
+-ls
+-PROJET_NAGIOS
+-cd PROJET_NAGIOS
+-git status
+-git add * (Mettre à jour tous les fichiers)
+-git status 
+-git commit -m "Commentaire"(commit)
+-git log (affiche les commits)
+
+Mis à jour des fichiers sur GitHub
+-git push origin master
+-USERNAME: SNIRNagios
+-MDP: SNIRNagios..

@@ -43,7 +43,7 @@ void FEN_Superviseur::on_PB_Valider_clicked()
     NomSite = ui->LE_NomSite->text();// Récupération du nom du site distant
 
 
-
+    
     // On enregistre le nom du fichier XML dans un QString
     QString NomFichier ="FichierSuperviseur.xml";
 
@@ -85,7 +85,7 @@ void FEN_Superviseur::on_PB_Valider_clicked()
 
 
   }
-
+    
 
 
 }

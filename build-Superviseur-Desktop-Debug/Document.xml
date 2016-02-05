@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Superviseur>
+ <SiteDistant1>
+  <Nom>M?diath?que</Nom>
+  <IP>127.0.0.2</IP>
+ </SiteDistant1>
+ <SiteDistant2>
+  <Nom>Ecole</Nom>
+  <IP>127.0.0.3</IP>
+ </SiteDistant2>
+ <information value="Teste du message"/>
+ <information value="Teste du message"/>
+ <information value="Teste du message"/>
+</Superviseur>

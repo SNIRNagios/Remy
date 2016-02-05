@@ -1,0 +1,44 @@
+QXmlStreamReader reader; // Objet servant à la navigation
+  QString NomFichie = "developpez.xml";
+  QFile FichierXML(NomFichie);
+  FichierXML.open(QFile::ReadOnly | QFile::Text); // Ouverture du fichier XML en lecture seule et en mode texte
+  reader.setDevice(&FichierXML); // Initialise l'instance reader avec le flux XML venant de file
+
+  //Le but de cette boucle est de parcourir le fichier et de vérifier si l'on est au début d'un élément.
+  reader.readNext();
+  while (!reader.atEnd())
+  {
+      if (reader.isStartElement())
+      {
+          if (reader.name() == "superviseur")
+          {
+              reader.readNext(); // On va au prochain token
+              // Tant que celui-ci n'est pas un élément de départ on avance au token suivant
+              while(reader.isStartElement()==false)
+                  reader.readNext();
+
+              if(reader.name() == "site")
+              {
+                  reader.readNext();
+                  while(reader.isStartElement()==false)
+                  reader.readNext();
+                  if(reader.name() == "nom")
+                  {
+                      QString strNom = reader.readElementText();
+                      reader.readNext();
+                      while(reader.isStartElement()==false)
+                      reader.readNext();
+                  }
+                  if(reader.name() == "url")
+                  {
+                      QString strUrl = reader.readElementText();
+                  }
+
+              }
+          }
+
+
+      }
+      reader.readNext(); // On va au prochain token
+  }
+  FichierXML.close();

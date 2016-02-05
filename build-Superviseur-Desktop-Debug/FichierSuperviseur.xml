@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Superviseur>
-    <Site distant>
-        <Ecole>127.0.0.1</Ecole>
-    </Site distant>
+
+    <SiteDistant1>
+        <Nom>Médiathèque</Nom>
+        <IP>127.0.0.2</IP>
+    </SiteDistant1>
+    
+    <SiteDistant2>
+        <Nom>Ecole</Nom>
+        <IP>127.0.0.3</IP>
+    </SiteDistant2>
+    
 </Superviseur>
