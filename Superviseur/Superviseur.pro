@@ -17,8 +17,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        fen_superviseur.cpp
+        fen_superviseur.cpp \
+    superviseur.cpp
 
-HEADERS  += fen_superviseur.h
+HEADERS  += fen_superviseur.h \
+    superviseur.h
 
 FORMS    += fen_superviseur.ui

@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -21,6 +22,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,8 +37,12 @@ public:
     QPushButton *PB_Annuler;
     QPushButton *PB_Valider;
     QFrame *line;
-    QLineEdit *LE_AdresseIP;
-    QLineEdit *LE_NomSite;
+    QLineEdit *LE_adresseIP;
+    QLineEdit *LE_nomSite;
+    QComboBox *comboBox;
+    QLabel *label_3;
+    QTextEdit *textEdit;
+    QPushButton *pushButton;
     QMenuBar *menuBar;
     QStatusBar *statusBar;
 
@@ -74,12 +80,24 @@ public:
         line->setGeometry(QRect(363, 10, 16, 281));
         line->setFrameShape(QFrame::VLine);
         line->setFrameShadow(QFrame::Sunken);
-        LE_AdresseIP = new QLineEdit(centralWidget);
-        LE_AdresseIP->setObjectName(QStringLiteral("LE_AdresseIP"));
-        LE_AdresseIP->setGeometry(QRect(100, 110, 91, 21));
-        LE_NomSite = new QLineEdit(centralWidget);
-        LE_NomSite->setObjectName(QStringLiteral("LE_NomSite"));
-        LE_NomSite->setGeometry(QRect(100, 70, 181, 21));
+        LE_adresseIP = new QLineEdit(centralWidget);
+        LE_adresseIP->setObjectName(QStringLiteral("LE_adresseIP"));
+        LE_adresseIP->setGeometry(QRect(100, 110, 91, 21));
+        LE_nomSite = new QLineEdit(centralWidget);
+        LE_nomSite->setObjectName(QStringLiteral("LE_nomSite"));
+        LE_nomSite->setGeometry(QRect(100, 70, 181, 21));
+        comboBox = new QComboBox(centralWidget);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(380, 80, 111, 22));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(380, 60, 131, 21));
+        textEdit = new QTextEdit(centralWidget);
+        textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setGeometry(QRect(520, 30, 211, 121));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(650, 230, 75, 23));
         FEN_Superviseur->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(FEN_Superviseur);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -102,6 +120,14 @@ public:
         label_2->setText(QApplication::translate("FEN_Superviseur", "Adresse IP:", 0));
         PB_Annuler->setText(QApplication::translate("FEN_Superviseur", "Annuler", 0));
         PB_Valider->setText(QApplication::translate("FEN_Superviseur", "Sauvegarder", 0));
+        comboBox->clear();
+        comboBox->insertItems(0, QStringList()
+         << QApplication::translate("FEN_Superviseur", "Ecole", 0)
+         << QApplication::translate("FEN_Superviseur", "M\303\251diath\303\250que", 0)
+         << QApplication::translate("FEN_Superviseur", "Mairie", 0)
+        );
+        label_3->setText(QApplication::translate("FEN_Superviseur", "Site distant sauvegard\303\251:", 0));
+        pushButton->setText(QApplication::translate("FEN_Superviseur", "Modifier", 0));
     } // retranslateUi
 
 };

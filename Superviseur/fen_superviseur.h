@@ -2,6 +2,7 @@
 #define FEN_SUPERVISEUR_H
 
 #include <QMainWindow>
+#include "superviseur.h"
 
 
 namespace Ui {
@@ -23,10 +24,11 @@ private slots:
 
 private:
     Ui::FEN_Superviseur *ui;
+    Superviseur *superviseur;
 
-    QString AdresseIP;
-    quint16 Port;
-    QString NomSite;
+    QString adresse;
+    QString site;
+
 
 };
 
