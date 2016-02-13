@@ -5,7 +5,6 @@ Accèder au dossier où sont situés les fichiers:
 -cd d:
 -cd SN2IR2016
 -ls
--Oddou
 -cd Oddou
 -ls
 -PROJET_NAGIOS
